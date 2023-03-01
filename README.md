@@ -1,39 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# theConcept-App
 
-## Getting Started
+Rebuild using Next JS
 
-First, run the development server:
+## Purpose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The Concept Box is an app that makes it easier for programmers to find explanations, refreshers, and examples for various programming concepts. While it is possible to use Google or Stack Overflow to find answers to programming questions, the sheer volume of information available online can be overwhelming, especially for beginners. The Concept Box streamlines this process by providing a more focused and efficient way for developers to find the information they need. Whether you are a beginner or an experienced developer, The Concept Box can help you understand and solve programming challenges more quickly and effectively.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech used:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Next.js
+- Styled Components
+- Node
+- Express
+- Mongodb
+- CSS
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## functionalities:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- ## Advanced AI searches using gpt3 API.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  The use of AI-powered technology like GPT-3 can greatly enhance the capabilities of The Concept Box. With advanced search results, the app can provide more accurate and relevant information to users, helping them find what they need faster.
 
-## Learn More
+- A search function that allows users to find explanations and examples for specific programming concepts.
 
-To learn more about Next.js, take a look at the following resources:
+- Create, Edit and remove codes created by users.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- A directory or index of programming concepts, organized by language or topic.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Code snippets or examples that demonstrate how to use a particular programming concept.
 
-## Deploy on Vercel
+- A "favorites" or bookmarking system that allows users to save and organize the concepts they are most interested in.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- User-submitted explanations and examples, with a system for rating and reviewing content to ensure its quality.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# concept-app-nextjs-v1
+- A "related concepts" feature that suggests related topics for users to explore based on their interests.
+
+- A system for tracking users' progress as they learn new concepts, with quizzes or challenges to test their knowledge.
+
+- A community forum or discussion board, where users can ask for help or share their own knowledge with others.
+
+## References:
+
+## Current features:
+
+- Authentication with Json Web Token
+- GPT3 API for Advanced Search
+
+## Next features
+
+- Integration with online coding environments or IDEs, so users can test out code snippets and examples directly within the app.
+
+## packages:
+
+- Express-async-errors to replace try and catch error handler (no need to use next function)
+- http-status-codes
+- bcryptjs to hash user passwords
+- axios for HTTP requests
+
+- react-speech-recognition
