@@ -12,7 +12,6 @@ const nextConfig = {
     MONGODB_DB: process.env.MONGODB_DB,
     JWT_SECRET: process.env.JWT_SECRET,
     JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN,
-    NEXTAUTH_SECRET: "tiu2QgQEvnNULyAJB1DFXjDIpTW/aDlixvaLVDBvTHk=",
   },
 };
 
