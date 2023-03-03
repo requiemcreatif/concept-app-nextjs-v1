@@ -1,13 +1,12 @@
 import Head from "next/head";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Concept app</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h1 className=" text-3xl font-bold underline">Hello Concept next</h1>
-    </div>
-  );
+  const { isAuthenticated } = useAuth0();
+
+  if (isAuthenticated) {
+    return <p>You are already logged in</p>;
+  }
+
+  return <div></div>;
 }

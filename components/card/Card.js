@@ -1,56 +1,8 @@
 import styled from "styled-components";
 import { SiCsswizardry } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
-
-export const StyledGeneralCode = styled.div`
-  .language-div {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    color: #fff;
-
-    .icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 25px;
-      width: 4rem;
-      height: 4rem;
-    }
-
-    .javaScript {
-      background-color: #00afb9;
-    }
-    .html {
-      background-color: #000;
-    }
-
-    .react {
-      background-color: #053651;
-    }
-    .node {
-      background-color: #9a1750;
-    }
-    .express {
-      background-color: #c3c6ce;
-    }
-    .CSS {
-      background-color: #ff9800;
-    }
-  }
-
-  .status {
-    font-size: 1.2rem;
-  }
-
-  .copyIcon {
-    display: flex;
-    justify-content: flex-end;
-
-    padding: 0 1rem;
-    cursor: pointer;
-  }
-`;
+import { ContentWrapper, Button } from "@/styledComponents/dashboardStyled";
+import CodeBlock from "../codeBlock/CodeBlock";
 
 const style = {
   width: "250px",
@@ -58,21 +10,22 @@ const style = {
 };
 
 const Card = ({ property: { description, code, language, title } }) => {
-  const codeTrim = code.length > 20 ? code.substring(0, 40) + "..." : code;
+  const codeTrim = code.length > 20 ? code.substring(0, 30) + "..." : code;
   const codeDescription =
     description.length > 20 ? description.substring(0, 110) + "..." : description;
 
   return (
-    <StyledGeneralCode>
-      <button
+    <div>
+      <Button
         type="button"
         className="btn-code"
-        onClick={() => {
-          openModal();
-          console.log("clicked");
-        }}>
+        // onClick={() => {
+        //   openModal();
+        //   console.log("clicked");
+        // }}
+      >
         <div className="card">
-          <div className="first-state-card">
+          <div className="card-header">
             <div className="language-div">
               {language === "JavaScript" ? (
                 <div className="language javaScript icon">
@@ -92,15 +45,18 @@ const Card = ({ property: { description, code, language, title } }) => {
                 <div className="language html icon">{language}</div>
               )}
             </div>
-            <div className="card-details">
+            <div>
               <h3 className="title">{title}</h3>
             </div>
           </div>
-          {/* <CodeBlock>{codeTrim}</CodeBlock> */}
-          <p className="description">{codeDescription}</p>
+
+          <p className="code-description">{codeDescription}</p>
+          <div className="code-block">
+            <CodeBlock>{codeTrim}</CodeBlock>
+          </div>
         </div>
-      </button>
-    </StyledGeneralCode>
+      </Button>
+    </div>
   );
 };
 
