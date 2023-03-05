@@ -21,8 +21,9 @@ const SearchBar = ({ onSearch, onReset, setSearchResults }) => {
   };
 
   return (
-    <div className="search-bar">
+    <div className="search-bar p-2 bg-white rounded-full flex shadow-md max-w-lg mx-auto">
       <input
+        className="search-input bg-transparent border-none w-full text-gray-800 mr-3 py-1 px-4 leading-tight focus:outline-none"
         type="text"
         placeholder="Search..."
         value={query}
