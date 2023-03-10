@@ -3,6 +3,7 @@ import { SiCsswizardry } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 
 import CodeBlock from "../codeBlock/CodeBlock";
+import Link from "next/link";
 
 const style = {
   width: "250px",
@@ -43,7 +44,7 @@ const Card = ({ property: { description, code, language, title } }) => {
           <h3 className="title font-semibold text-left">{title}</h3>
           <p className="code-description pt-2 leading-5 text-sm text-left">{codeDescription}</p>
 
-          <button className=" text-xs absolute left-3 bottom-3 font-semibold">Read more</button>
+          <p className=" text-xs absolute left-3 bottom-3 font-semibold">Read more</p>
         </div>
       </div>
     </button>
